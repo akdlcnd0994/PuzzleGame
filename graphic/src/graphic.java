@@ -528,4 +528,3 @@ class Time extends Thread { // Thread클래스를 상속
 	}
 
 }
-

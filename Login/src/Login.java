@@ -9,12 +9,12 @@ public class Login {
 	static Scanner scan = new Scanner(System.in);
 	public static void main(String[] args) {
 		int pass = 0;
-		System.out.println("LogInÀ» À§ÇØ ID¿Í PW¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
-		System.out.println("ID ÀÔ·Â : ");
+		System.out.println("LogInì„ ìœ„í•´ IDì™€ PWë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
+		System.out.println("ID ì…ë ¥ : ");
 		String id =scan.nextLine();
-		System.out.println("PW ÀÔ·Â : ");
+		System.out.println("PW ì…ë ¥ : ");
 		String pw = scan.nextLine();
-		File file = new File("C:\\Users\\h\\Desktop\\MemberDB.txt");//ÀÔÃâ·Â ÆÄÀÏ À§Ä¡
+		File file = new File("C:\\Users\\h\\Desktop\\MemberDB.txt");//ì…ì¶œë ¥ íŒŒì¼ ìœ„ì¹˜
 		try {
 			FileReader filereader = new FileReader(file);
 			BufferedReader bufReader = new BufferedReader(filereader);
@@ -24,10 +24,10 @@ public class Login {
 					int passId = line.indexOf(id);
 					int passPw = line.indexOf(pw);
 					if(passId != -1 && passPw != -1) {
-						System.out.println("·Î±×ÀÎ ¼º°ø");
+						System.out.println("ë¡œê·¸ì¸ ì„±ê³µ");
 						pass = 1;	}			
 					}
-				if(pass==0) { System.out.println("·Î±×ÀÎ½ÇÆĞ"); }
+				if(pass==0) { System.out.println("ë¡œê·¸ì¸ì‹¤íŒ¨"); }
 				bufReader.close();
 			} catch (IOException e) { e.printStackTrace();	}	
 		} catch (FileNotFoundException e) {	e.printStackTrace();}

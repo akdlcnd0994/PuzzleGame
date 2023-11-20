@@ -6,18 +6,18 @@ import java.util.Scanner;
 public class MemberJoin {
 	static Scanner scan = new Scanner(System.in);
 	public static void main(String[] args) {
-		File file = new File("C:\\Users\\h\\Desktop\\MemberDB.txt");//ÀÔÃâ·Â ÆÄÀÏ À§Ä¡
+		File file = new File("C:\\Users\\h\\Desktop\\MemberDB.txt");//ì…ì¶œë ¥ íŒŒì¼ ìœ„ì¹˜
 		try {
 			FileWriter filewriter = new FileWriter(file, true);
 			if(file.isFile() && file.canWrite()) {
-				System.out.println("È¸¿ø°¡ÀÔÀ» À§ÇØ ID¿Í PW¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
-				System.out.println("ID ÀÔ·Â: ");
+				System.out.println("íšŒì›ê°€ì…ì„ ìœ„í•´ IDì™€ PWë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
+				System.out.println("ID ì…ë ¥: ");
 				filewriter.append(scan.nextLine());
 				filewriter.append("\t");
-				System.out.println("PW ÀÔ·Â: ");
+				System.out.println("PW ì…ë ¥: ");
 				filewriter.append(scan.nextLine());
 				filewriter.append("\r");
-				System.out.println("È¸¿ø°¡ÀÔÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+				System.out.println("íšŒì›ê°€ì…ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 			}
 			filewriter.close();
 		} catch (IOException e) {
